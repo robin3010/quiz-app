@@ -1,0 +1,15 @@
+.bar {
+  min-width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  padding: 0 !important;
+  border-radius: 2px;
+}
+
+.bar-completed {
+  background-color: #444;
+}
+
+.bar-active {
+  background-color: crimson;
+}
