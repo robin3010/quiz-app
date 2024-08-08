@@ -5,6 +5,10 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/quiz-app/',
+  define: {
+    global: 'globalThis',
+  },
   plugins: [react(), eslint(), tsconfigPaths()],
   optimizeDeps: {
     esbuildOptions: {

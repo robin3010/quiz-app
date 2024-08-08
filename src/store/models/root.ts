@@ -8,7 +8,7 @@ import {
 } from 'mobx-state-tree'
 import { getInitSnapshot } from 'store/lib/helpers'
 import {
-  ISaveDataLocalArgs,
+  SaveDataLocalArgs,
   getCachedData,
   saveDataLocal,
 } from 'store/lib/localStorage'
@@ -44,7 +44,7 @@ export const RootStoreModel = t
       self.active = index
     },
     saveData() {
-      const dataToSave: ISaveDataLocalArgs = {
+      const dataToSave: SaveDataLocalArgs = {
         quizId: self.quizId,
         answers: self.answers,
         active: self.active,
@@ -55,7 +55,7 @@ export const RootStoreModel = t
       saveDataLocal(dataToSave)
     },
     clearAnswers() {
-      const clearData: ISaveDataLocalArgs = {
+      const clearData: SaveDataLocalArgs = {
         quizId: self.quizId,
         clear: true,
       }

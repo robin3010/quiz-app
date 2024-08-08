@@ -17,7 +17,10 @@ module.exports = {
   plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/jsx-no-bind': 'off',
@@ -25,13 +28,13 @@ module.exports = {
       'error',
       'ignorePackages',
       {
-        "": 'never',
-        'js': 'never',
-        'jsx': 'never',
-        'ts': 'never',
-        'tsx': 'never',
-        'mjs': 'never'
-      }
+        '': 'never',
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        mjs: 'never',
+      },
     ],
     'react/function-component-definition': [
       2,
@@ -40,12 +43,12 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     '@typescript-eslint/no-unused-vars':
       process.env.NODE_ENV === 'production' ? 'error' : 'off',
     '@typescript-eslint/naming-convention': 'off',
     'no-param-reassign': 'off',
-    'react/jsx-props-no-spreading': 'off'
+    'react/jsx-props-no-spreading': 'off',
   },
-};
+}
